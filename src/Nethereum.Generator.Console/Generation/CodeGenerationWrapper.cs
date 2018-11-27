@@ -43,7 +43,7 @@ namespace Nethereum.Generator.Console.Generation
         {
             foreach (var generator in config.GetProjectGenerators())
             {
-                System.Console.WriteLine($"Gen for {generator.ContractName}");
+                System.Console.WriteLine($"Processing {generator.ContractName}");
                 var generatedFiles = singleFile ? generator.GenerateAllMessagesFileAndService() : generator.GenerateAll();
                 _generatedFileWriter.WriteFiles(generatedFiles);
             }
